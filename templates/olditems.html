@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/materialize.min.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" id="title"> Item Catalog </a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="http://www.github.com">Git</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+        <div class="row">
+            <div id="sidebar" class="col s12 m12 l2">
+
+            <h5> Categories</h5>
+            <div class="divider"> </div>
+                <p> Tshirts </p>
+                <p> Sweater </p>
+                <p> Jackets </p>
+            </div>
+
+            <div class="col s12 m12 l10" id="item-container">
+            <div class="section">
+
+            <div class="row">
+               <div class="col l6" >
+                <h2> {{ category.name }}</h2>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li> <strong> {{message}} </strong></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="col l6">
+        <a id="add-button" href="{{ url_for('newItem', category_id=category.id)}}" class="waves-effect waves-light btn red lighten-1 right">
+            <i class="material-icons left">add_circle_outline</i>
+            Add New Item
+        </a>
+        </div>
+       </div>
+        <div class="section">
+
+        <div class="section">
+
+        {% for i in items %}
+        <div class="item col s12 m6 l4 center-align">
+
+        <img src="{{i.img}}" width="200">
+        <br>
+        <span class=""> <strong>{{i.name}}</strong></span>
+        <br>
+        <span class=""> {{i.price}}</span>
+        <br>
+        <a href="{{ url_for('editItem', category_id=category.id, item_id = i.id) }}" class="btn-flat btn-small waves-effect"><i class="material-icons left">create</i>Edit</a>
+
+        <a href="{{ url_for('deleteItem', category_id=category.id, item_id = i.id) }}" class="btn-flat btn-small waves-effect"><i class="material-icons left">delete</i>Delete</a>
+
+
+        <br>
+        <br>
+        <br>
+        </div>
+        {% endfor %}
+
+        </div>
+        </div>
+
+
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/materialize.min.js')}}"></script>
+    </body>
+  </html>

@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<h1> Edit Item </h1>
+
+        <br>
+
+        <form method='POST' action="{{url_for('editItem', category_id = item.category_id, item_id=item.id)}}">
+
+        <p> Name : </p>
+        <input name='newName' type ='text' placeholder='{{item.name}}'>
+
+        <input type='submit' value='Rename'>
+
+        <a href="{{ url_for('ItemCatalog', category_id=item.category_id)}}"> Cancel </a>
+
+
+
+        </form>
+
+   	</body>
+</html>

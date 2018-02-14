@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+  <div class="container">
+        <div class="row">
+            <div id="sidebar" class="col s12 m12 l2">
+
+            <h5> Categories</h5>
+            <div class="divider"> </div>
+            {% for category in categories %}
+                <a class="category-link" href="{{url_for('showItems', category_id = category.id)}}">{{category.name}} </p></a>
+            {% endfor %}
+            </div>
+
+            <div class="col s12 m12 l10" id="item-container">
+            <div class="section">
+
+            <div class="row">
+               <div class="col l6" >
+                <h2> {{ category.name }}</h2>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li> <strong> {{message}} </strong></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+    </div>
+    <div class="col l6 s6">
+        <a id="add-button" href="{{ url_for('newItem', category_id=category.id)}}" class="waves-effect waves-light btn red lighten-1 right">
+            <i class="material-icons left">add_circle_outline</i>
+            Add New Item
+        </a>
+        </div>
+       </div>
+        <div class="section">
+
+        <div class="section">
+
+        {% for i in items %}
+        <div class="item col s12 m6 l4 center-align">
+
+        <img src="{{i.img}}" width="200">
+        <br>
+        <span class=""> <strong>{{i.name}}</strong></span>
+        <br>
+        <span class=""> {{i.price}}</span>
+        <br>
+        <a href="{{ url_for('editItem', category_id=category.id, item_id = i.id) }}" class="btn-flat btn-small waves-effect"><i class="material-icons left">create</i>Edit</a>
+
+        <a href="{{ url_for('deleteItem', category_id=category.id, item_id = i.id) }}" class="btn-flat btn-small waves-effect"><i class="material-icons left">delete</i>Delete</a>
+
+
+        <br>
+        <br>
+        <br>
+        </div>
+        {% endfor %}
+
+        </div>
+        </div>
+
+
+      </div>
+{% endblock %}

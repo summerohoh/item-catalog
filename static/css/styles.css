@@ -1,0 +1,101 @@
+html,body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	}
+
+@font-face {
+        font-family: Roboto;
+        src: url(/static/fonts/Roboto-regular.ttf);
+ 	}
+
+div.nav-wrapper{
+	background-color: #fff;
+	border-bottom: 1px 1px 3px #fce4ec;
+	padding: 0 5%;
+	}
+
+nav a{
+	color: #000;
+	font-family: Roboto;
+	font-size: 20px;
+	}
+
+nav ul a{
+	color: #000;
+	height: 100%;
+	}
+
+nav ul a:hover{
+	color: #000;
+	}
+
+a#title{
+	font-size: 30px;
+	}
+
+img#github{
+	padding-top: 10px;
+	padding-bottom: auto;
+}
+
+div.container{
+	width: 90%;
+	height: 100%;
+	top:0;
+	bottom:0;
+}
+
+div#sidebar{
+	height: 100%;
+	background-color: #fff;
+	margin-top: 30px;
+	}
+
+.divider{
+	margin-bottom: 20px;
+}
+a.category-link{
+	margin-top: 10px;
+	line-height: 30px;
+	text-decoration: none;
+	color: #000;
+}
+
+a.category-link:hover{
+	text-decoration: underline;
+}
+
+a.#add-button{
+	margin-right: 200px !important;
+}
+
+#item-container{
+	background-color: #fff;
+	margin-top: 20px;
+	}
+
+.item img{
+	padding-top: 50px;
+	}
+
+.btn-flat{
+	padding: 0 0.5rem;
+	}
+
+.btn-flat a{
+	color: #bdbdbd;
+	}
+
+i.left{
+	margin-right: 5px;
+	}
+
+#login{
+	margin-top: 10%;
+}
+.card-content p{
+	padding: 30px;
+}
+
+
