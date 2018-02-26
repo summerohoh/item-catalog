@@ -1,8 +1,8 @@
-#Item Catalog #
+# Item Catalog #
 
 
 
-##Set Up ##
+## Set Up ##
 
 1. Install Vagrant and VirtualBox
 2. Clone the fullstack-nanodegree-vm
