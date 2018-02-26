@@ -6,19 +6,19 @@
 
 ## Built with 
 
-  *Python
-  *Flask
-  *SQLAlchemy
-  *HTML/CSS/JavaScript
-  *Jinja2
-  *OAuth (Google & Facebook)
-  *Materialize.js
+  * Python
+  * Flask
+  * SQLAlchemy
+  * HTML/CSS/JavaScript
+  * Jinja2
+  * OAuth (Google & Facebook)
+  * Materialize.js
 
 ## Set Up
 
 #### 1. Install [Vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-####2. Clone the vagrantfile from Udacity repo: [fullstack-nanodegree-vm] ()
+#### 2. Clone the vagrantfile from Udacity repo: [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm)
 
 #### 3. Launch the Virtual Machine:
 
@@ -32,7 +32,7 @@ When finished, run
 
 to log in to the newly installed Linux VM
 
-####4. Clone this repo into vagrant subdirectory. 
+#### 4. Clone this repo into vagrant subdirectory. 
 
 #### 5. Populate the database
 
@@ -46,8 +46,7 @@ Withint the same directory, use the command
 
     python project.py
 
-#### 7. Access and test your application by visiting http://localhost:5000 locally
-
+#### 7. Access and test application by visiting http://localhost:5000 locally
 
 
 ## Source & References 
