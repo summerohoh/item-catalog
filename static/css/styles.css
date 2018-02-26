@@ -4,39 +4,58 @@ html,body {
 	padding: 0px;
 	}
 
+ body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+ }
+
+ main {
+     flex: 1 0 auto;
+ }
+
 @font-face {
         font-family: Roboto;
         src: url(/static/fonts/Roboto-regular.ttf);
- 	}
+ }
 
 div.nav-wrapper{
 	background-color: #fff;
 	border-bottom: 1px 1px 3px #fce4ec;
 	padding: 0 5%;
-	}
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
 
 nav a{
 	color: #000;
 	font-family: Roboto;
-	font-size: 20px;
-	}
-
-nav ul a{
-	color: #000;
 	height: 100%;
-	}
+}
 
-nav ul a:hover{
-	color: #000;
-	}
+a.login-button{
+	font-size: 15px;
+}	
+
+a.login-button:hover{
+	color: #fff;
+	background-color: none;
+}
 
 a#title{
 	font-size: 30px;
-	}
+}
 
-img#github{
-	padding-top: 10px;
-	padding-bottom: auto;
+i#accounticon{
+	font-size: 2rem;
+}
+
+img.profile-img{
+	max-width: 30px;
+	margin-right: 10px;
 }
 
 div.container{
@@ -50,11 +69,12 @@ div#sidebar{
 	height: 100%;
 	background-color: #fff;
 	margin-top: 30px;
-	}
+}
 
 .divider{
 	margin-bottom: 20px;
 }
+
 a.category-link{
 	margin-top: 10px;
 	line-height: 30px;
@@ -66,36 +86,132 @@ a.category-link:hover{
 	text-decoration: underline;
 }
 
-a.#add-button{
-	margin-right: 200px !important;
-}
-
 #item-container{
 	background-color: #fff;
 	margin-top: 20px;
-	}
+}
 
 .item img{
 	padding-top: 50px;
-	}
+}
+
+.brand-name{
+	letter-spacing: 2px;
+}
 
 .btn-flat{
 	padding: 0 0.5rem;
-	}
+}
 
 .btn-flat a{
 	color: #bdbdbd;
-	}
+}
 
 i.left{
 	margin-right: 5px;
-	}
+}
 
+i.right{
+	margin: 0; 
+}
+
+.pushright{
+	padding-left: 30px;
+}
 #login{
 	margin-top: 10%;
 }
-.card-content p{
-	padding: 30px;
+
+.formbox{
+	margin-top: 10%;
+}
+
+div.card-image{
+	height: 170px;
+	width: auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.card-image img{
+	transform: scale(0.7, 0.7) translate(0px, -100px);
+}
+
+.card .card-content{
+	padding: 10px;
+}
+
+a.card-link{
+	line-height: 50px;
+	font-size: 1.5rem;
+	color: #000;
+}
+
+.add-button{
+	min-width: 200px;
+}
+
+#manage{
+	height: 80%;
+}
+
+a.manage-btn{
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a.manage-btn:hover{
+	color:#ef5350 !important;
+}
+
+@media screen and (min-width : 992px) {
+.add-button{
+	float: right;
+}
+}
+
+/* label color */
+.input-field label {
+ color: #000;
+ font-weight: 300;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #ef5350 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #ef5350 !important;
+ box-shadow: 0 1px 0 0 #ef5350 !important;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #ef5350 !important;
+}
+
+a.cancel{
+	color:#757575;
+	line-height: 30px;
+}
+
+.page-footer p{
+	font-weight: 300;
+	color: #757575;
+}
+
+a.footer-link{
+	color: #ef5350 !important;
 }
 
 

@@ -1,13 +1,29 @@
+<header>
 <div class="row top-menu">
 <nav>
     <div class="nav-wrapper red lighten-1">
-      <a href="{{url_for('showCategory')}}" id="title"> Catalog </a>
-      <ul id="nav-mobile" class="right">
-        <li><a href="{{url_for('showLogin')}}"> SIGN IN </a> </li>
-        <li> <a href="www.github.com"> GITHUB </a> </li>
-      </ul>
+    <div class="row">
+      <a id="title"href="{{url_for('showCategory')}}"> Catalog </a>  
+	   
+	    {%if 'username' not in session %}
+	    	<span class="valign-wrapper right"> 
+			<a class="login-button" href="{{url_for('showLogin')}}"> 
+      		<i id="accounticon" class="material-icons left"> account_circle </i> LOG IN </a> 
+      		</span>
+		{% else %}	
+			
+			<span class="valign-wrapper right"> 
+			<img src="{{user.picture}}" class="profile-img responsive-img circle"> 
+			<a class="login-button" href="{{url_for('disconnect')}}">
+			LOG OUT </a>
+			
+			</span>
+
+		{% endif %}
+
+    </div> 
     </div>
   </nav>
 </div>
-
+</header>
 

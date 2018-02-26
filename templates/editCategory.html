@@ -1,21 +1,36 @@
-<html>
-	<body>
-		<h1> Edit Item </h1>
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
 
-        <br>
+<div class="container">
 
-        <form method='POST' action="{{url_for('editItem', category_id = item.category_id, item_id=item.id)}}">
+<section class="formbox">
 
-        <p> Name : </p>
-        <input name='newName' type ='text' placeholder='{{item.name}}'>
+  <div class="row">
+      <div class="card center-align col s10 m6 l6 offset-s1 offset-m3 offset-l3">
+          <div class="card-content">
+              <span class="card-title"> Edit Category </span>
+          </div>
 
-        <input type='submit' value='Rename'>
+          <div class="card-action">
+            
+            <form method='POST' action="{{url_for('editCategory', category_id=category.id)}}">
 
-        <a href="{{ url_for('ItemCatalog', category_id=item.category_id)}}"> Cancel </a>
+              <div class="input-field col s12">
+                <input name="name" value="{{category.name}}" type="text" class="validate" >
+                <label for="name"> Name </label>
+              </div>
 
+            <input class="btn red lighten-1" type='submit' value='Update'>
+            <a class="btn red lighten-1" href="{{url_for('showCategory')}}"> Cancel</a>
+            </form>
 
+          </div>
+      </div>
 
-        </form>
+  </div>
+</div>
+</section>
+</div>
 
-   	</body>
-</html>
+ {% endblock %}

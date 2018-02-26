@@ -21,25 +21,13 @@
                 <h2> {{ category.name }}</h2>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
+                    <ul>
                     {% for message in messages %}
-                     
-                    <script>
-                    $(function() {
-                    Materialize.toast("{{ message }}", 3000);
-                    });
-                    </script>
-
+                        <li> <strong> {{message}} </strong></li>
                     {% endfor %}
+                    </ul>
                 {% endif %}
             {% endwith %}
-            </div>
-            </div>
-            <div class="row center-align">
-            <div class="add-button">
-                <a  href="{{ url_for('newItem', category_id=category.id)}}" class="waves-effect waves-light btn red lighten-1">
-                    <i class="material-icons left">add_circle_outline</i>
-                    Add New Item
-                </a>
             </div>
             </div>
 
@@ -56,17 +44,9 @@
         <span> {{i.name}}</span>
         <br>
         <span class=""> {{i.price}}</span>
-        <br>
-        <br>
         </a>
 
-        <a href="{{ url_for('editItem', category_id=category.id, item_id = i.id) }}" class="btn-flat btn-small waves-effect"><i class="material-icons left">create</i>Edit</a>
-
-        <a href="{{ url_for('deleteItem', category_id=category.id, item_id = i.id) }}" class="btn-flat btn-small waves-effect"><i class="material-icons left">delete</i>Delete</a>
-
-
-        <br>
-        <br>
+       
         <br>
         </div>
         {% endfor %}
