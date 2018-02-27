@@ -77,23 +77,18 @@ def gconnect():
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
         response = make_response(
-                    json.dumps(
-                                'Failed to upgrade the authorization code'
+                    json.dumps('Failed to upgrade the authorization code'
                     ), 401)
         response.headers['Content-Type'] = 'application/json'
         return response
 
     # Check if access token is valid
     access_token = credentials.access_token
-    url = (
-        'https://www.googleapis.com/oauth2/v1/' +
-        'tokeninfo?access_token = %s' % access_token
-         )
+    url = ('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=%s' % access_token)
 
     # Create json GET request containing url & access token
     h = httplib2.Http()
     result = json.loads(h.request(url, 'GET')[1])
-
     # If there is an error, abort.
     if result.get('error') is not None:
         response = make_response(json.dumps(result.get('error')), 500)
@@ -172,8 +167,7 @@ def gdisconnect():
         response.headers['Content-Type'] = 'application/json'
         return response
 
-    url = 'https://accounts.google.com/o/oauth2/'+
-    'revoke?token=%s' % login_session['access_token']
+    url = 'https://accounts.google.com/o/oauth2/revoke?token=%s' % login_session['access_token']
     h = httplib2.Http()
     result = h.request(url, 'GET')[0]
 
@@ -214,8 +208,7 @@ def fbconnect():
 
     # Use token to get user info from API
     # Make API call with new token
-    url = 'https://graph.facebook.com/v2.9/'+
-    'me?%s&fields=name,id,email,picture' % token
+    url = 'https://graph.facebook.com/v2.9/me?%s&fields=name,id,email,picture' % token
 
     h = httplib2.Http()
     result = h.request(url, 'GET')[1]
@@ -253,8 +246,7 @@ def fbdisconnect():
     facebook_id = login_session['facebook_id']
     # The access token must be included to successfully logout
     access_token = login_session['access_token']
-    url = 'https://graph.facebook.com'+
-    '/%s/permissions?access_token=%s' % (facebook_id, access_token)
+    url = 'https://graph.facebook.com/%s/permissions?access_token=%s' % (facebook_id, access_token)
     h = httplib2.Http()
     result = h.request(url, 'DELETE')[1]
     return "you have been logged out"
@@ -471,7 +463,7 @@ def CategoriesJSON():
     return jsonify(Categories=[c.serialize for c in categories])
 
 
-@app.route('/catalog/<int:category_id>/item/JSON')
+@app.route('/catalog/<int:category_id>/items/JSON')
 def CategoryItemsJSON(category_id):
     category = session.query(Category).get(category_id)
     items = session.query(Item).filter_by(category_id=category_id).all()
@@ -483,6 +475,17 @@ def ItemJSON(category_id, item_id):
     category = session.query(Category).get(category_id)
     item = session.query(Item).filter_by(id=item_id).one()
     return jsonify(Item=[item.serialize])
+
+
+# Footer links 
+@app.route('/catalog/portfolio', methods=['GET'])
+def portfolio():
+    return redirect("http://summerohoh.github.io")
+
+
+@app.route('/catalog/github', methods=['GET'])
+def github():
+    return redirect("https://github.com/summerohoh/item-catalog")
 
 
 if __name__ == '__main__':
