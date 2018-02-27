@@ -52,6 +52,7 @@ Withint the same directory, use the command
 
   * /catalog/JSON
     * Shows information on all categories.
+    ![image](/docs/categoriesJSON.png?raw=true "Categories JSON")
 
   * /catalog/<int:category_id>/items/JSON
     * Shows information for all items in category corresponding to *category_id*.
@@ -62,6 +63,7 @@ Withint the same directory, use the command
 ## Project Display 
 
   * Homepage displays all current categories in the catalog.
+
 ![image](/docs/category.png?raw=true "Category Page")
 
   * Selecting a specific category shows you all the items available for that category. 
@@ -73,19 +75,19 @@ Withint the same directory, use the command
   * After logging in, a user has the ability to add, update, or delete categories and items.
  
     * Category page for a logged user. Flash message is shown in a toast. 
-![image](/docs/category_log.png?raw=true "Category Page")
+![image](/docs/category_log.png?raw=true "Category Log Page")
 
     * Editing category.
-![image](/docs/edit.png?raw=true "Category Page")
+![image](/docs/edit.png?raw=true "Edit Category Page")
 
     * Items page for a logged user. 
-![image](/docs/items_log.png?raw=true "Category Page")
+![image](/docs/items_log.png?raw=true "Item Log Page")
 
     * Adding a new item.
-![image](/docs/newitem.png?raw=true "Category Page")
+![image](/docs/newitem.png?raw=true "New Item Page")
 
     * Deleting an item.
-![image](/docs/delete.png?raw=true "Category Page")
+![image](/docs/delete.png?raw=true "Delete Item Page")
 
 ## Sources & References 
   * Udacity - Full Stack Developer Nanodegree
