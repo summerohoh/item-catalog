@@ -61,6 +61,8 @@ Withint the same directory, use the command
 
 ## Project Display 
 
+![Alt text](/docs/category.png?raw=true "Category Page")
+
 ## Sources & References 
   * Udacity - Full Stack Developer Nanodegree
     * [Full Stack Foundation](https://classroom.udacity.com/courses/ud088)
