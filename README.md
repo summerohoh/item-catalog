@@ -7,8 +7,8 @@
 ## Built with 
 
   * Python
-  * Flask
-  * SQLAlchemy
+  * [Flask](http://flask.pocoo.org)
+  * [SQLAlchemy](http://www.sqlalchemy.org)
   * HTML/CSS/JavaScript
   * Jinja2
   * OAuth (Google & Facebook)
@@ -48,9 +48,21 @@ Withint the same directory, use the command
 
 #### 7. Access and test application by visiting http://localhost:5000 locally
 
+## API Endpoints
+
+  * /catalog/JSON
+    * Shows information on all categories.
+
+  * /catalog/<int:category_id>/item/JSON
+    * Shows information for all items in category corresponding to category_id.
+
+  * /catalog/<int:category_id>/<int:item_id>/JSON
+    * Shows information for a specific item corresponding to item_id within category specificed by category_id.
+
 
 ## Source & References 
-* Udacity - Full Stack Developer Nanodegree
+  * Udacity - Full Stack Developer Nanodegree
+    * [Authentication & Authorization] (https://classroom.udacity.com/courses/ud330/lessons/3960758610/concepts/39804189050923)
 
 
 
