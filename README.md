@@ -61,7 +61,7 @@ Withint the same directory, use the command
 
 ## Project Display 
 
-![Alt text](/docs/category.png?raw=true "Category Page")
+![image](/docs/category.png?raw=true,width=250 "Category Page")
 
 ## Sources & References 
   * Udacity - Full Stack Developer Nanodegree
