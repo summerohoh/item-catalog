@@ -61,7 +61,31 @@ Withint the same directory, use the command
 
 ## Project Display 
 
-![image](/docs/category.png?raw=true,width=250 "Category Page")
+  * Homepage displays all current categories in the catalog.
+![image](/docs/category.png?raw=true "Category Page")
+
+  * Selecting a specific category shows you all the items available for that category. 
+![image](/docs/items.png?raw=true "Items Page")
+
+  * Users can log in using either Google or Facebook account. 
+![image](/docs/login.png?raw=true "Login Page")
+
+  * After logging in, a user has the ability to add, update, or delete categories and items.
+ 
+    * Category page for a logged user. Flash message is shown in a toast. 
+![image](/docs/category_log.png?raw=true "Category Page")
+
+    * Editing category.
+![image](/docs/edit.png?raw=true "Category Page")
+
+    * Items page for a logged user. 
+![image](/docs/items_log.png?raw=true "Category Page")
+
+    * Adding a new item.
+![image](/docs/newitem.png?raw=true "Category Page")
+
+    * Deleting an item.
+![image](/docs/delete.png?raw=true "Category Page")
 
 ## Sources & References 
   * Udacity - Full Stack Developer Nanodegree
