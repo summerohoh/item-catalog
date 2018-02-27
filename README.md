@@ -54,17 +54,17 @@ Withint the same directory, use the command
     * Shows information on all categories.
 
   * /catalog/<int:category_id>/items/JSON
-    * Shows information for all items in category corresponding to category_id.
+    * Shows information for all items in category corresponding to *category_id*.
 
   * /catalog/<int:category_id>/<int:item_id>/JSON
-    * Shows information for a specific item corresponding to item_id within category specificed by category_id.
+    * Shows information for a specific item corresponding to *item_id* within category specificed by *category_id*.
 
 ## Project Display 
 
 ## Sources & References 
   * Udacity - Full Stack Developer Nanodegree
     * [Full Stack Foundation](https://classroom.udacity.com/courses/ud088)
-    * [Authentication & Authorization] (https://classroom.udacity.com/courses/ud330/lessons/3960758610/concepts/39804189050923)
+    * [Authentication & Authorization](https://classroom.udacity.com/courses/ud330/lessons/3960758610/concepts/39804189050923)
   * All items used to populate database in lotsofclothes.py are from [farfetch](www.farfetch.com)
 
 
