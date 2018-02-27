@@ -171,8 +171,8 @@ item5 = Item(user=user1, name="belted trench coat", img="https://cdn-images.farf
 session.add(item5)
 session.commit()
 
-item6 = Item(user=user1, name="BURBERRY", img="https://cdn-images.farfetch-contents.com/12/69/82/20/12698220_12387122_480.jpg",
-	brand = "laminated check trench coat", shopURL="https://www.farfetch.com/shopping/women/burberry-laminated-check-trench-coat-item-12698220.aspx?storeid=9544&from=listing&tglmdl=1", price="$2524", category=category4)
+item6 = Item(user=user1, name="laminated check trench coat", img="https://cdn-images.farfetch-contents.com/12/69/82/20/12698220_12387122_480.jpg",
+	brand = "BURBERRY", shopURL="https://www.farfetch.com/shopping/women/burberry-laminated-check-trench-coat-item-12698220.aspx?storeid=9544&from=listing&tglmdl=1", price="$2524", category=category4)
 
 session.add(item6)
 session.commit()
