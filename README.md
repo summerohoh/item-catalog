@@ -109,9 +109,6 @@ Withint the same directory, use the command
     * [Full Stack Foundation](https://classroom.udacity.com/courses/ud088)
     * [Authentication & Authorization](https://classroom.udacity.com/courses/ud330/lessons/3960758610/concepts/39804189050923)
   * All items used to populate database in lotsofclothes.py are from [farfetch](www.farfetch.com)
-
-
-    
-
+  * Materialize: [Documentation](http://materializecss.com)   
 
 
