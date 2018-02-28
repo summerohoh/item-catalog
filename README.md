@@ -64,30 +64,45 @@ Withint the same directory, use the command
 
   * Homepage displays all current categories in the catalog.
 
-![image](/docs/category.png?raw=true "Category Page")
+  ![image](/docs/category.png?raw=true "Category Page")
+
+
 
   * Selecting a specific category shows you all the items available for that category. 
-![image](/docs/items.png?raw=true "Items Page")
+
+  ![image](/docs/items.png?raw=true "Items Page")
+
+
 
   * Users can log in using either Google or Facebook account. 
-![image](/docs/login.png?raw=true "Login Page")
+  ![image](/docs/login.png?raw=true "Login Page")
+
+
 
   * After logging in, a user has the ability to add, update, or delete categories and items.
  
     * Category page for a logged user. Flash message is shown in a toast. 
-![image](/docs/category_log.png?raw=true "Category Log Page")
+
+    ![image](/docs/category_log.png?raw=true "Category Log Page")
+
 
     * Editing category.
-![image](/docs/edit.png?raw=true "Edit Category Page")
+
+    ![image](/docs/edit.png?raw=true "Edit Category Page")
+
+
 
     * Items page for a logged user. 
-![image](/docs/items_log.png?raw=true "Item Log Page")
+
+    ![image](/docs/items_log.png?raw=true "Item Log Page")
 
     * Adding a new item.
-![image](/docs/newitem.png?raw=true "New Item Page")
+
+    ![image](/docs/newitem.png?raw=true "New Item Page")
 
     * Deleting an item.
-![image](/docs/delete.png?raw=true "Delete Item Page")
+    
+    ![image](/docs/delete.png?raw=true "Delete Item Page")
 
 ## Sources & References 
   * Udacity - Full Stack Developer Nanodegree
