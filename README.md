@@ -1,5 +1,5 @@
 # Item Catalog #
-
+###### Summer J. Oh ######
 
 ## Overview
 > A web application that provides a list of clothing items within a variety of categories. The app also implements a third-party authentication & authorization service (Google and Facebook accounts). Signed-in users have the ability to create, edit and delete their own categories and items.
